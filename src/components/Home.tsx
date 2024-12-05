@@ -49,13 +49,12 @@ const  navigate = useNavigate()
           <tbody>
   {data && data.length > 0 ? (
     data.map((doc) => {
-      // Check if profile is a File object and create Object URL if true
       let imageUrl = undefined;
 
       if (doc.profile instanceof File) {
-        imageUrl = URL.createObjectURL(doc.profile); // Create Object URL from File
+        imageUrl = URL.createObjectURL(doc.profile); 
       } else if (typeof doc.profile === 'string') {
-        imageUrl = doc.profile; // If profile is a URL string, use it directly
+        imageUrl = doc.profile;
       }
 
       return (

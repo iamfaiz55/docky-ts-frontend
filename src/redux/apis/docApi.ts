@@ -19,7 +19,10 @@ export interface IDoc {
 
 export const docApi = createApi({
     reducerPath: "docApi",
-    baseQuery: fetchBaseQuery({ baseUrl: `${import.meta.env.VITE_BACKEND_URL}/api/doc`, credentials: "include" }),
+    baseQuery: fetchBaseQuery({
+        baseUrl: `${import.meta.env.VITE_BACKEND_URL}/api/doc`,
+        credentials: "include"
+    }),
     tagTypes: ["doc"],
     endpoints: (builder) => {
         return {
