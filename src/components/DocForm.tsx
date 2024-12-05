@@ -361,7 +361,7 @@ const DocForm: React.FC = () => {
 
     const handleInterestChange = (interest: string) => {
         const updatedInterests = interests.includes(interest)
-            ? interests.filter((item) => item !== interest)
+            ? interests.filter((item:string) => item !== interest)
             : [...interests, interest];
         setValue("interests", updatedInterests);
     };
