@@ -350,7 +350,7 @@ const DocForm: React.FC = () => {
         setValue,
         reset,
         watch,
-    } = useForm<fd>({
+    } = useForm<IDoc>({
         resolver: zodResolver(schema),
         defaultValues: {
             interests: [],
@@ -420,7 +420,8 @@ const DocForm: React.FC = () => {
             reset();
             navigate("/");
         }
-    }, [updateSuccess]);
+    }, [updateSuccess, navigate, reset, setSelectedData]);
+    
 
     return (
         <div className="container mt-5">
